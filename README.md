@@ -95,6 +95,11 @@ Options: Base / <u>Large (Default)</u>
         <li>
             Router
             <ul><b>Description</b>: Utilizes a router module to dynamically assign weights to different modalities, adapting to the task requirements.</ul>
+            <ul><b>Diagram</b>: 
+            <img 
+            src="figures/clip_router.jpg"
+            alt="CLIP + Router Module">
+            </ul>
         </li>
         <li>
             <del>Boosting</del>
@@ -122,6 +127,11 @@ Options: Base / <u>Large (Default)</u>
         <li>
             ML-Decoder [3]
             <ul><b>Description</b>: Focuses on learning robust representations by leveraging embeddings, facilitating effective decoding in complex scenarios.</ul>
+            <ul><b>Diagram</b>: 
+            <img 
+            src="figures/blip_ml_decoder.png"
+            alt="BLIP + Anything">
+            </ul>
         </li>
     </ul>
 </details>

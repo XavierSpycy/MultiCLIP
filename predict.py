@@ -15,7 +15,7 @@ from multi_clip import (
     default_compute_outputs)
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--checkpoint_path", type=str, default="checkpoints/blip_ml_decoder_large_bce_v1_lr0.001_bs256_seed3407_loss.pth")
+parser.add_argument("--checkpoint_path", type=str)
 parser.add_argument("--batch_size", type=int, default=256)
 parser.add_argument("--gpu_id", type=int, default=0)
 args = parser.parse_args()
@@ -26,7 +26,7 @@ device = torch.device(f"cuda:{args.gpu_id}" if torch.cuda.is_available() else "c
 if torch.cuda.device_count() > 1:
     alternative_device = torch.device(f"cuda:{1 - args.gpu_id}")
 
-output_file = "submission_" + checkpoint_path.split("/")[-1].split(".")[0] + ".csv"
+output_file = "submission_" + checkpoint_path.split("/")[-1].split(".pth")[0] + ".csv"
 
 label_encoder = LabelEncoder.from_pretrained()
 image_paths_and_texts, labels = load_data('train', label_encoder=label_encoder)
