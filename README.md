@@ -90,50 +90,70 @@ Options: Base / <u>Large (Default)</u>
             <em>Multimodal</em>: Fusion Strategies
         </h2>
     </summary>
-    <h3>CLIP</h3>
+    <details>
+    <summary><h3>CLIP</h3></summary>
     <ul>
         <li>
-            Router
-            <ul><b>Description</b>: Utilizes a router module to dynamically assign weights to different modalities, adapting to the task requirements.</ul>
-            <ul><b>Diagram</b>: 
-            <img 
-            src="figures/clip_router.jpg"
-            alt="CLIP + Router Module">
-            </ul>
+            <details>
+                <summary>Router</summary>
+                <ul><b>Description</b>: Utilizes a router module to dynamically assign weights to different modalities, adapting to the task requirements.</ul>
+                <ul>
+                    <p><b>Diagram</b>:</p>
+                    <p align="center">
+                        <img src="figures/clip_router.png">
+                    </p>
+                    <div align="center" style="font-weight: bold">CLIP + Router</div>
+            </details>
         </li>
         <li>
-            <del>Boosting</del>
-            <ul><b>Description</b>: Currently ineffective, this strategy requires further development and optimization.</ul>
+            <details>
+                <summary><del>Boosting</del></summary>
+                <ul><b>Description</b>: Currently ineffective, this strategy requires further development and optimization.</ul>
+            </details>
         </li>
     </ul>
-    <h3>BLIP</h3>
+    </details>
+    <details>
+    <summary><h3>BLIP</h3></summary>
     <ul>
         <li>
-            Naive
-            <ul><b>Description</b>: The original BLIP model effectively extracts features from multiple modalities without complex modifications.</ul>
+            <details>
+                <summary>Naive</summary>
+                <ul><b>Description</b>: The original BLIP model effectively extracts features from multiple modalities without complex modifications.</ul>
+            </details>
         </li>
         <li>
-            Ensembling
-            <ul><b>Description</b>: Combines base classifiers that use both unimodal and multimodal features to improve prediction accuracy.</ul>
+            <details>
+                <summary>Ensembling</summary>
+                <ul><b>Description</b>: Combines base classifiers that use both unimodal and multimodal features to improve prediction accuracy.</ul>
+            </details>
         </li>
         <li>
-            <del>Boosting</del>
-            <ul><b>Description</b>: This strategy is still under development as it has not yet proven effective.</ul>
+            <details>
+                <summary><del>Boosting</del></summary>
+                <ul><b>Description</b>: This strategy is still  under development as it has not yet proven effective.</ul>
+            </details>
         </li>
         <li>
-            Graph Attention Transformer (GAT)
-            <ul><b>Description</b>: Employs Graph Neural Networks (GNNs) to model the relationships between labels, enhancing multilabel classification tasks.</ul>
+            <details>
+                <summary>Graph Attention Transformer (GAT)</summary>
+                <ul><b>Description</b>: Employs Graph Neural Networks (GNNs) to model the relationships between labels, enhancing multilabel classification tasks.</ul>
+            </details>
         </li>
         <li>
-            ML-Decoder [3]
-            <ul><b>Description</b>: Focuses on learning robust representations by leveraging embeddings, facilitating effective decoding in complex scenarios.</ul>
-            <ul><b>Diagram</b>: 
-            <img 
-            src="figures/blip_ml_decoder.png"
-            alt="BLIP + Anything">
-            </ul>
+            <details>
+                <summary>ML-Decoder [3]</summary>
+                <ul><b>Description</b>: Focuses on learning robust representations by leveraging embeddings, facilitating effective decoding in complex scenarios.</ul>
+                <ul><p><b>Diagram</b>:</p>
+                    <p align="center">
+                        <img src="figures/blip_ml_decoder.png">
+                    </p>
+                    <div align="center" style="font-weight: bold">BLIP + Anything</div>
+                </ul>
+            </details>
         </li>
     </ul>
+    </details>
 </details>
 
 <details>
